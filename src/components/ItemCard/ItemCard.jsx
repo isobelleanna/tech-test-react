@@ -3,11 +3,11 @@ import "./ItemCard.scss";
 import CheckBox from "../Checkbox/CheckBox";
 import Button from "../Button/Button";
 
-const ItemCard = () => {
+const ItemCard = ({ label }) => {
   return (
     <div className="item-card">
       <CheckBox />
-      <p className="item-card__content">Todo</p>
+      <p className="item-card__content">{label}</p>
       <Button buttonText="🗑" buttonStyle="button__item-card" />
     </div>
   );
