@@ -4,12 +4,12 @@ import ItemCard from "../../components/ItemCard/ItemCard";
 import Message from "../../components/Message/Message";
 import Form from "../../components/Form/Form";
 
-const Main = () => {
+const Main = ({ handleSubmit, activeList }) => {
   return (
     <div className="main">
-      <Form />
+      <Form handleSubmit={handleSubmit} />
       <ItemCard />
-      <Message />
+      <Message activeList={activeList} />
     </div>
   );
 };

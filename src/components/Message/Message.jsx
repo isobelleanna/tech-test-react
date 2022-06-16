@@ -1,13 +1,15 @@
 import React from "react";
 import "./Message.scss";
 
-const Message = () => {
+const Message = ({ activeList }) => {
   return (
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Modi, laboriosam
-      animi. At magnam hic error placeat sequi sunt quidem odit exercitationem
-      fugit est quasi illo sit officia ab, enim sed!
-    </p>
+    <div>
+      {activeList ? (
+        <p></p>
+      ) : (
+        <p>Nothing to see yet....Add a task to the field above 👆</p>
+      )}
+    </div>
   );
 };
 

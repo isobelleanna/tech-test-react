@@ -1,13 +1,12 @@
 import React from "react";
-import Button from "../Button/Button";
 
-const Form = () => {
+const Form = ({ handleSubmit, getInput }) => {
   return (
-    <form className="form" action="">
-      <label htmlFor="">
-        <input type="text" />
+    <form onSubmit={handleSubmit}>
+      <label>
+        <input type="text" name="todo" onInput={getInput} />
       </label>
-      <Button buttonText="➕" buttonStyle="button__form" />
+      <input type="submit" value="➕" />
     </form>
   );
 };
