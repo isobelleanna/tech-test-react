@@ -34,7 +34,7 @@ function App() {
   };
 
   return (
-    <div className="App">
+    <div className="app">
       <Nav onReset={onReset} />
       <Main
         handleSubmit={handleSubmit}
