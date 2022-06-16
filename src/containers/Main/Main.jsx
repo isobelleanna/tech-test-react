@@ -4,12 +4,23 @@ import ItemCard from "../../components/ItemCard/ItemCard";
 import Message from "../../components/Message/Message";
 import Form from "../../components/Form/Form";
 
-const Main = ({ handleSubmit, activeList, todoArr }) => {
+const Main = ({
+  handleSubmit,
+  activeList,
+  todoArr,
+  checked,
+  onCheckboxChange,
+}) => {
   return (
     <div className="main">
       <Form handleSubmit={handleSubmit} />
       {todoArr.map((item) => (
-        <ItemCard key={item.id} label={item.item} />
+        <ItemCard
+          key={item.id}
+          label={item.item}
+          checked={checked}
+          onCheckboxChange={onCheckboxChange}
+        />
       ))}
 
       <Message activeList={activeList} />

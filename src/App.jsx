@@ -6,6 +6,7 @@ import { useState } from "react";
 function App() {
   const [todoList, setTodoList] = useState([]);
   const [listActive, setListActive] = useState(false);
+  const [checked, setChecked] = useState(false);
 
   const handleSubmit = (event) => {
     event.preventDefault();
@@ -19,14 +20,16 @@ function App() {
       setListActive(true);
     }
   };
-  const onReset = (event) => {
+
+  const onReset = () => {
     setTodoList([]);
     setListActive(false);
-    console.log(todoList);
   };
-  console.log(todoList.length);
-  console.log(todoList);
-  console.log(listActive);
+
+  const onCheckboxChange = () => {
+    setChecked(!checked);
+  };
+  console.log(checked);
   return (
     <div className="App">
       <Nav onReset={onReset} />
@@ -34,6 +37,8 @@ function App() {
         handleSubmit={handleSubmit}
         activeList={listActive}
         todoArr={todoList}
+        checked={checked}
+        onCheckboxChange={onCheckboxChange}
       />
     </div>
   );

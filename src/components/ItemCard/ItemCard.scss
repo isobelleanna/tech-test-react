@@ -6,3 +6,11 @@
     justify-content: space-around;
     border: 1px solid $colour-black;
 }
+
+.inactive {
+    text-decoration: line-through;
+}
+
+.active {
+    text-decoration: none;
+}
