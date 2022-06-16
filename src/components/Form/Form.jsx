@@ -1,10 +1,16 @@
 import React from "react";
+import "./Form.scss";
 
 const Form = ({ handleSubmit, getInput }) => {
   return (
-    <form onSubmit={handleSubmit}>
+    <form className="form" onSubmit={handleSubmit}>
       <label>
-        <input type="text" name="todo" onInput={getInput} />
+        <input
+          className="form__input"
+          type="text"
+          name="todo"
+          onInput={getInput}
+        />
       </label>
       <input type="submit" value="➕" />
     </form>

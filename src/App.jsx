@@ -3,6 +3,8 @@ import Nav from "./containers/Nav/Nav";
 import Main from "./containers/Main/Main";
 import { useState } from "react";
 
+/// if I had more time I would finish the styling  and make the delete button work
+
 function App() {
   const [todoList, setTodoList] = useState([]);
   const [listActive, setListActive] = useState(false);

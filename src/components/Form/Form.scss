@@ -1,1 +1,9 @@
 @use "../../assets/sass/variables" as *;
+
+.form {
+    margin: 1em;
+    &__input {
+        width: 86%;
+        height: 3vh;
+    }
+}
