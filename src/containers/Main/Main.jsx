@@ -10,6 +10,7 @@ const Main = ({
   todoArr,
   checked,
   onCheckboxChange,
+  handleDelete,
 }) => {
   return (
     <div className="main">
@@ -20,6 +21,8 @@ const Main = ({
           label={item.item}
           checked={checked}
           onCheckboxChange={onCheckboxChange}
+          handleDelete={handleDelete}
+          name={item.id}
         />
       ))}
 

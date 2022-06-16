@@ -29,7 +29,10 @@ function App() {
   const onCheckboxChange = () => {
     setChecked(!checked);
   };
-  console.log(checked);
+  const handleDelete = (event) => {
+    console.log(event.target);
+  };
+
   return (
     <div className="App">
       <Nav onReset={onReset} />
@@ -39,6 +42,7 @@ function App() {
         todoArr={todoList}
         checked={checked}
         onCheckboxChange={onCheckboxChange}
+        handleDelete={handleDelete}
       />
     </div>
   );
